@@ -469,10 +469,12 @@
     }
   }
 
+  var list = ['#fcdd07','#1191d0','#f1592a', '#eb098f', '#21b24b']
+
   Bloom = function (tree, point, figure, color, alpha, angle, scale, place, speed) {
     this.tree = tree;
     this.point = point;
-    this.color = color || 'rgb(' + random(0, 255) + ',' + random(0, 255) + ',255)';
+    this.color = color || list[Math.floor((Math.random()*list.length))];;
     this.alpha = alpha || random(0.3, 1);
     this.angle = angle || random(0, 360);
     this.scale = scale || 0.1;
